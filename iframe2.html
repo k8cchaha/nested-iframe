@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Hello Im am iframe 2</h2>
+
+  <script>
+    console.log('Iframe 2')
+    window.addEventListener('load', () => {
+      parent.postMessage('Hello YYYYYYY', '*');
+      parent.parent.postMessage('Hello ZZZZZZZ', '*');
+    });
+  </script>
+</body>
+</html>
